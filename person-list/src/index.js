@@ -1,12 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const Person = () => {
+const Person = props => {
+  console.log(props);
   return(
     <article>
-      <img src="https://randomuser.me/api/portraits/thumb/men/65.jpg" alt="person image"
-
-      />
+      <img src="https://randomuser.me/api/portraits/thumb/men/61.jpg" alt="person"/>
       <h4>name</h4>
       <h4>job</h4>
 
@@ -17,7 +16,7 @@ const Person = () => {
 const PersonList = () => {
   return(
     <section>
-      <Person />
+      <Person img="34" name="john" job="developer" />
     </section>
   )
 }
