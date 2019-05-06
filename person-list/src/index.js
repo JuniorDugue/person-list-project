@@ -17,7 +17,7 @@ const Person = ({img, name, job, children}) => {
 
 const PersonList = () => {
   return(
-    <section>
+    <section className="person-list">
       <Person img="34" name="june" job="ceo" />
       <Person img="22" name="jr" job="developer">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, minus?</p>
