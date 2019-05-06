@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import './index.css';
 
-const Person = props => {
-  console.log(props);
+const Person = ({img, name, job, children}) => {
+  // console.log(props);
+  const url = `https://randomuser.me/api/portraits/thumb/men/${img}.jpg`;
   return(
-    <article>
-      <img src="https://randomuser.me/api/portraits/thumb/men/61.jpg" alt="person"/>
-      <h4>name</h4>
-      <h4>job</h4>
-
+    <article className="person">
+      <img src={url} alt="person"/>
+      <h4>{name}</h4>
+      <h4>{job}</h4>
+      {children}
     </article>
   )
 }
@@ -16,7 +18,11 @@ const Person = props => {
 const PersonList = () => {
   return(
     <section>
-      <Person img="34" name="john" job="developer" />
+      <Person img="34" name="june" job="ceo" />
+      <Person img="22" name="jr" job="developer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, minus?</p>
+      </Person>
+      <Person img="56" name="junior" job="designer" />
     </section>
   )
 }
