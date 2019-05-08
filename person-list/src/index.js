@@ -18,11 +18,15 @@ const Person = ({img, name, job, children}) => {
 const PersonList = () => {
   return(
     <section className="person-list">
-      <Person img="34" name="june" job="ceo" />
+      <Person img="34" name="june" job="ceo">
+        <p>dolor sit amet consectetur adipisicing elit.</p>
+      </Person>
       <Person img="22" name="jr" job="developer">
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, minus?</p>
       </Person>
-      <Person img="56" name="junior" job="designer" />
+      <Person img="56" name="junior" job="designer">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+      </Person>
     </section>
   )
 }
